@@ -27,8 +27,8 @@ spec:
         - containerPort: 8080
 	      readinessProbe:
           httpGet:
-             path: /sum?a=1&b=2
-             port: 8080
+            path: /sum?a=1&b=2
+            port: 8080
 
 ---
 
