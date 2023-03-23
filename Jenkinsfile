@@ -40,9 +40,9 @@ podTemplate(yaml: '''
             cp Chapter08/sample1/calculator2.yaml Chapter08/sample1/calculator.yaml
             ./kubectl apply -f Chapter08/sample1/calculator.yaml -n staging
             ./kubectl get pods -n staging
-            sleep 15
+            sleep 20
             ./kubectl get pods -n staging
-            sleep 15
+            sleep 20
             ./kubectl get pods -n staging
             '''    
           }  
@@ -65,7 +65,7 @@ podTemplate(yaml: '''
             sh '''
             cp Chapter08/sample1/calculator3.yaml Chapter08/sample1/calculator.yaml
             ./kubectl apply -f Chapter08/sample1/calculator.yaml -n staging
-            sleep 30
+            sleep 90
             '''
             try {
               sh '''
