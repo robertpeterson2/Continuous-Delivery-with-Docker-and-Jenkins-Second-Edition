@@ -9,7 +9,14 @@ podTemplate(yaml: '''
       - sleep
       args:
       - 99d
+      volumeMounts:
+      - name: shared-storage
+        mountPath: /mnt     
     restartPolicy: Never
+    volumes:
+    - name: shared-storage
+      persistentVolumeClaim:
+        claimName: jenkins-pv-claim
 ''') {
 
   node(POD_LABEL) {
