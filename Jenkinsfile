@@ -65,7 +65,7 @@ podTemplate(yaml: '''
             sh '''
             cp Chapter08/sample1/calculator3.yaml Chapter08/sample1/calculator.yaml
             ./kubectl apply -f Chapter08/sample1/calculator.yaml -n staging
-            sleep 90
+            sleep 60
             '''
             try {
               sh '''
